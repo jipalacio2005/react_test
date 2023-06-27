@@ -4,7 +4,7 @@ pipeline {
     environment {
         NAME_IMG = 'react-test-app'
         NAME_CTN = 'react-test-container'
-        APP_PORT: '3003'
+        APP_PORT = '3003'
     }
     
     options {
