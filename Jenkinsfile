@@ -23,12 +23,12 @@ pipeline {
         }
         stage('Obtener dependencias') {
             steps {
-                sh '/usr/local/bin/npm install'
+                sh 'npm install'
             }
         }
         stage('Compilar') {
             steps {
-                sh '/usr/local/bin/npm run build'
+                sh 'npm run build'
             }
         }
         stage('Dockerize') {
