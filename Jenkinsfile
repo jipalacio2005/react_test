@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Inicializar') {
             steps {
-                sh '/usr/local/bin/node -v && rm -Rf node_modules/ && rm -Rf build/'
+                sh 'node -v && rm -Rf node_modules/ && rm -Rf build/'
             }
         }
         stage('Obtener dependencias') {
