@@ -18,17 +18,17 @@ pipeline {
         }
         stage('Inicializar') {
             steps {
-                sh 'node -v && rm -Rf node_modules/ && rm -Rf build/'
+                sh '/usr/local/bin/node -v && rm -Rf node_modules/ && rm -Rf build/'
             }
         }
         stage('Obtener dependencias') {
             steps {
-                sh 'npm install'
+                sh '/usr/local/bin/npm install'
             }
         }
         stage('Compilar') {
             steps {
-                sh 'npm run build'
+                sh '/usr/local/bin/npm run build'
             }
         }
         stage('Dockerize') {
